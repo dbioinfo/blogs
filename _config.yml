@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is my personal blog for discussions pertaining to bioinformatics
   and scientific communication
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "www.linkedin.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://dylan-unlv.github.io/blogs/" # the base hostname & protocol for your site, e.g. http://example.com
 
 theme: jekyll-theme-merlot
 #favicon_ico: "/assets/mptcp_logo.svg"
