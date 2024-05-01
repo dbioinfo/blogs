@@ -1,3 +1,8 @@
+---
+layout: default
+title: beanis
+---
+
 # *Is AI coming for your bioinformatics job?*
 
   Amid the hype surrounding recent advances in AI, programmers in every domain have begun wringing their hands about being replaced. Even in my own field, bioinformatics, the question seems pervasive. Of course, as bioinformaticians, our role as a scientific advisor is far too complex to be filled by modern AI, at least by any of the currently commercially available models. To be a scientist is to operate on the edge of what is known and unknown, and the unknown is a concept that modern AI are famously bad at comprehending. 
