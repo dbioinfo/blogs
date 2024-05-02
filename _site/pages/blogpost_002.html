@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=d16fbb9ec75b2a464bd17a36eadf8ea1e148b480" media="screen">
+    <link rel="stylesheet" href="/assets/css/mobile.css" media="only screen and (max-width:640px)">
+    <link rel="stylesheet" href="/assets/css/non-screen.css" media="only screen and (max-width:640px)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="/assets/js/modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/assets/js/headsmart.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Importance of Code-Switching in Bioinformatics | Bioinfo Blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The Importance of Code-Switching in Bioinformatics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Musings about bioinformatics and molecular evolution" />
+<meta property="og:description" content="Musings about bioinformatics and molecular evolution" />
+<link rel="canonical" href="http://localhost:4000/pages/blogpost_002.html" />
+<meta property="og:url" content="http://localhost:4000/pages/blogpost_002.html" />
+<meta property="og:site_name" content="Bioinfo Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Importance of Code-Switching in Bioinformatics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Musings about bioinformatics and molecular evolution","headline":"The Importance of Code-Switching in Bioinformatics","url":"http://localhost:4000/pages/blogpost_002.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <div class="shell">
+
+      <header>
+        <div class="ribbon-outer">
+          <div class="ribbon-inner">
+            <h1>Bioinfo Blog</h1>
+            <h2>Musings about bioinformatics and molecular evolution</h2>
+          </div>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </div>
+      </header>
+
+      
+        <div id="no-downloads">
+          <span class="inner">
+          </span>
+        </div>
+      
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1 id="the-importance-of-code-switching-in-bioinformatics">The Importance of Code-Switching in Bioinformatics</h1>
+
+<blockquote>
+  <p>… one of the main functions of an analogy or model is to suggest extensions of the theory by considering extensions of the analogy, since more is known about the analogy than is known about the subject matter of the theory itself … A collection of observable concepts in a purely formal hypothesis suggesting no analogy with anything would consequently not suggest either any directions for its own development.</p>
+</blockquote>
+
+<div style="text-align: right;"> -Dr. Mary B. Hess </div>
+
+<p>My understanding of what I now consider to be the central problem in bioinformatics started in my early PhD career, I was presented with a project involving all of the genes in all of the species on ENSEMBL combined with annotated protein domain data from PFAM for every domain within each gene. I won’t bore you all with the details, but suffice to say this was a massive amount of information to comprehend as a first year grad student. The analysis itself was abstract and statistical enough for me to understand the project almost entirely through data science terms, rarely interacting with the meaning underlying this newly created database. Once the project was finished, my PI and I sat down to finally get our hands dirty and write the paper, and it went smoothly until the discussion section came up. What did any of this really mean? We could draw some plotlines through the data, tell a gestalt of a story, but in the end what we created was a resource meant for an intellect very different from our own. My advisor and I were both heavily computer-oriented bioinformaticists, so when it came to reconcile the differences in protein domains between dozens of species across tens of thousands of genes, a shrug was all that registered. The database can be thought of as just a couple different tables, which you could sort through in various ways, but to someone naive to molecular genetics and protein domains, it’s as good as Greek. We had pulled off something technically impressive that no other lab had even attempted in a forgotten corner of biological intrigue, but we lacked someone who could translate this information into meaningful patterns and plotlines. Ultimately the project went nowhere, you can see the database we made here if you think you have what it takes to ride this sandworm.</p>
+
+<p>In search of meaning, my PI helped me find someone with specific domain knowledge who needed help processing their differential expression analysis in rice. This time, I wanted to focus on what I could do to help Dr. Shen and Santi comprehend the story that they had so meticulously set in motion. Refocused on extracting meaning from the dataset rather than merely building an impressive infrastructure, I was able to develop a more advanced interface of the data that, I had hoped, would allow my colleagues to easily identify the genetic programs that turn on in response to their stimulus. Naivety. Not only did I produce volcano plots and expression plots of the most DE genes, I decided to run WGCNA on their dataset, which basically just automatically groups modules of correlated genes together with the aim of capturing entire cascades of related genes. Ideally you could explore this network through a program like Cytoscape with annotation and pathway analysis built in. However due to some problems installing the software, the PI mostly ended up just reading the analysis like a table of genes labeled with their particular modules. This did work to some extent, but it took a long time for Dr. Shen and Santi to make heads or tails of this mess of a table with admittedly often suspicious module groupings. They were able to identify a few main results that related to their genes of interest and eventually write up the paper that’s in review now.</p>
+
+<p>I began to think that I was on to something, but still had doubts about its ultimate efficacy. Producing the data through a particular pipeline was one part of the problem, the part of the problem I was technically trained to do during my PhD, but having this technical skill alone could not address extracting semantic meaning. I began to conceptualize the data like actors on a stage, reading from the script I had written that constitutes the pipeline. I could show the script to the directors, but it was often too technical to mean anything to them. I could show them the data playing out the script, but with so much data, the stage is quite full and dynamic. What was needed was a spotlight to guide the attention of the audience. Delivering the data in tabular form with no further sophistication is kind of like watching complex choreography with the house lights on, it’s hard to know where to focus, but on the contrary performing an analysis with a singular result in mind a priori is like having a spotlight follow only the protagonist, which obviously changes the plot of any show. The problem is one of scope and scale mixed in with semantic meaning that I simply don’t have access to at the moment, but it may be uncovered by one who can recognize the plotlines hiding within. This metaphor lead me to understand that I was to design the spotlight and deliver it to the right director’s hands, because only through our cooperation could the entirety of the plot be revealed. Or in literal terms, the central problem in bioinformatics is one of communication and translation between the technological sphere and the biological sphere.</p>
+
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            
+              <p>this project by <a href="https://github.com/dylan-unlv">dylan-unlv</a> can be found on <a href="https://github.com/dylan-unlv/blogs">GitHub</a></p>
+            
+            
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+  </body>
+</html>
