@@ -3,6 +3,9 @@ layout: default
 title: Bioinformatics Blog
 ---
 
+## June 2024
+
+ * [Lying about LLMs](/pages/blogpost_003.md)
 
 ## May 2024
 
